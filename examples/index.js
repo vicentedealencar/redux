@@ -1,11 +1,9 @@
 import React from 'react';
-import CounterApp from './counter/App';
-import TodoApp from './todo/App';
+import CheckoutApp from './checkout/App';
 
 React.render(
   <div>
-    <CounterApp />
-    <TodoApp />
+    <CheckoutApp />
   </div>,
   document.getElementById('root')
 );

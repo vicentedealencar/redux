@@ -15,12 +15,13 @@ export default function cartStore(cart = initialState, action) {
       found[0].quantity++;
       found[0].value += product.price;
     } else {
-      cart.itens.push({
+
+      cart.itens = [{
         id: product.id,
         name: product.name,
         quantity: 1,
         value: product.price
-      });
+      }, ...cart.itens];
     }
 
     cart.total += product.price;

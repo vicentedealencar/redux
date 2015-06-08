@@ -2,3 +2,7 @@ export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
 export const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
 
 export const ADD_TODO = 'ADD_TODO';
+
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const CLOSE_ORDER = 'CLOSE_ORDER';
+export const CONFIRM_PAYMENT = 'CONFIRM_PAYMENT';

@@ -9,7 +9,7 @@ export default class CheckoutApp {
     closeOrder: PropTypes.func.isRequired,
     confirmPayment: PropTypes.func.isRequired,
     products: PropTypes.array,
-    cart: PropTypes.object
+    cart: PropTypes.object.isRequired
   };
 
   render() {
@@ -19,7 +19,7 @@ export default class CheckoutApp {
 
     console.log('render');
 
-    if (!cart.isClosed) {
+    if (cart && !cart.isClosed) {
       catalog = <Catalog products={products} addToCart={addToCart} />;
     } else {
       payment = <Payment cart={cart} confirmPayment={confirmPayment} />;

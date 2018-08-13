@@ -6,7 +6,7 @@ Projects built with Create-React-App include support for ES6 syntax, as well as 
 
 ## Demos
 - [Without persistence](https://shopping-cart-gsiksaxbdz.now.sh/)
-- [With persistence](https://shopping-cart-etyosuphdc.now.sh)
+- [With persistence](https://shopping-cart-cklapixjsq.now.sh)
 
 ## Available Scripts
 

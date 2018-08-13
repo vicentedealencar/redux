@@ -1,3 +1,6 @@
+import PouchDB from 'pouchdb'
+import { persistentDocumentReducer } from 'redux-pouchdb'
+
 import {
   ADD_TO_CART,
   CHECKOUT_REQUEST,
@@ -52,4 +55,5 @@ const cart = (state = initialState, action) => {
   }
 }
 
-export default cart
+const db = new PouchDB('sc-cart')
+export default persistentDocumentReducer(db, 'cart')(cart)

@@ -7,6 +7,7 @@ import thunk from 'redux-thunk'
 import reducer from './reducers'
 import { getAllProducts } from './actions'
 import App from './containers/App'
+import { persistStore } from 'redux-pouchdb';
 
 const middleware = [ thunk ];
 if (process.env.NODE_ENV !== 'production') {
@@ -17,6 +18,8 @@ const store = createStore(
   reducer,
   applyMiddleware(...middleware)
 )
+
+persistStore(store)
 
 store.dispatch(getAllProducts())
 

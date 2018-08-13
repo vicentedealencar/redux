@@ -1,3 +1,5 @@
+import PouchDB from 'pouchdb'
+import { persistentDocumentReducer } from 'redux-pouchdb'
 import { combineReducers } from 'redux'
 import { RECEIVE_PRODUCTS, ADD_TO_CART } from '../constants/ActionTypes'
 
@@ -44,10 +46,12 @@ const visibleIds = (state = [], action) => {
   }
 }
 
-export default combineReducers({
+
+const db = new PouchDB('sc-products')
+export default persistentDocumentReducer(db, 'products')(combineReducers({
   byId,
   visibleIds
-})
+}))
 
 export const getProduct = (state, id) =>
   state.byId[id]

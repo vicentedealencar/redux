@@ -1,16 +1,16 @@
 import shop from '../api/shop'
 import * as types from '../constants/ActionTypes'
 
-const receiveProducts = products => ({
+export const receiveProducts = products => ({
   type: types.RECEIVE_PRODUCTS,
   products
 })
 
-export const getAllProducts = () => dispatch => {
-  shop.getProducts(products => {
-    dispatch(receiveProducts(products))
-  })
-}
+// export const getAllProducts = () => dispatch => {
+//   shop.getProducts(products => {
+//     dispatch(receiveProducts(products))
+//   })
+// }
 
 const addToCartUnsafe = productId => ({
   type: types.ADD_TO_CART,
